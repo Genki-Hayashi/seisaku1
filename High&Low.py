@@ -10,9 +10,9 @@ class ContinueDialog(tk.Toplevel):
         self.title("continue?")
         self.geometry("+%d+%d" % (parent.winfo_rootx() + 50, parent.winfo_rooty() + 50))
         self.result = None
-        self.grab_set()  # ダイアログが閉じるまで他のウィンドウとの対話を防止する
-        self.focus_set()  # ダイアログにフォーカスを設定する
-        self.lift()  # ダイアログを最前面に移動する
+        self.grab_set()
+        self.focus_set()
+        self.lift()
 
         label = tk.Label(self, text="続行しますか？", font=("Helvetica", 20, "bold"))
         label.pack(padx=50, pady=10)
